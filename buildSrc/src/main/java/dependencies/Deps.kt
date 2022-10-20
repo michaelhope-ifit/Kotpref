@@ -16,6 +16,9 @@ object Deps {
     const val truth = "com.google.truth:truth:${Versions.truth}"
 
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
+    const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
+    const val moshiAdapt = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
 
     object Kotlin {
         const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"

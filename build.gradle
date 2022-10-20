@@ -49,6 +49,12 @@ task replaceVersionInReadme {
         ant.replaceregexp(match: 'kotlin-([0-9\\.]+)-blue\\.svg', replace: "kotlin-${Versions.kotlin}-blue.svg", flags: 'g') {
             fileset(dir: project.projectDir, includes: 'README.md')
         }
+        ant.replaceregexp(match: 'com\\.squareup\\.moshi:moshi:([0-9\\.]+)', replace: "com.squareup.moshi:moshi:${Versions.moshi}", flags: 'g') {
+            fileset(dir: project.projectDir, includes: 'README.md')
+        }
+        ant.replaceregexp(match: 'com\\.squareup\\.moshi:moshi-adapters:([0-9\\.]+)', replace: "com.squareup.moshi:moshi-adapters:${Versions.moshi}", flags: 'g') {
+            fileset(dir: project.projectDir, includes: 'README.md')
+        }
     }
 }
 
