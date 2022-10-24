@@ -35,7 +35,7 @@ public class MoshiNullablePref<T : Any> constructor(
 
     private fun serializeToJson(value: T?): String? {
         return adapter.let {
-            if (it == null) throw IllegalStateException("Gson has not been set to Kotpref")
+            if (it == null) throw IllegalStateException("Moshi has not been set to Kotpref")
 
             it.toJson(value)
         }
@@ -43,7 +43,7 @@ public class MoshiNullablePref<T : Any> constructor(
 
     private fun deserializeFromJson(json: String): T? {
         return adapter.let {
-            if (it == null) throw IllegalStateException("Gson has not been set to Kotpref")
+            if (it == null) throw IllegalStateException("Moshi has not been set to Kotpref")
 
             it.fromJson(json)
         }
